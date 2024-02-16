@@ -21,7 +21,7 @@ function getQueryParams() {
 }
 function hideElements() {
     // 요소를 선택합니다.
-    const rows = document.querySelectorAll('table.gall_list > tbody > tr.ub-content.us-post');
+    const rows = document.querySelectorAll('table.gall_list > tbody > tr.ub-content');
 
     // 각각의 요소에 대해 숨기는 조건을 검사합니다.
     rows.forEach(function(row) {
