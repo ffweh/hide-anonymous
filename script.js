@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        hide-anonymous
 // @namespace   Violentmonkey Scripts
-// @match       https://gall.dcinside.com/board/lists/*
+// @match       https://gall.dcinside.com/board/*
 // @grant       none
 // @version     1.0
 // @author      -
