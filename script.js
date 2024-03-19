@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://gall.dcinside.com/board/*
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      -
 // @description 디시 만갤 념글 유동글 숨기기
 // ==/UserScript==
@@ -32,7 +32,7 @@ function hideElements() {
       if(writerIP===null)return;
 
       // 유동닉이고 제목에 특정 단어 포함되어 있으면 예외
-      const isIncluded = ['번역)', '.manhwa'].some(word=>title.textContent.includes(word));
+      const isIncluded = ['번역)', '.manhwa', '단편'].some(word=>title.textContent.includes(word));
       if(isIncluded)return;
 
       row.style.display = 'none';
@@ -46,4 +46,5 @@ window.onload = function(){
   if(!params.id.includes('comic_new'))return;
   if(params.exception_mode!=='recommend')return;
   hideElements();
+  setTimeout(hideElements,3000); // 3초 뒤 재검사
 }
